@@ -1,0 +1,8 @@
+{
+  "name": "githits",
+  "description": "Search GitHub with GitHits directly from Claude Code",
+  "version": "1.0.0",
+  "author": {
+    "name": "GitHits"
+  }
+}
