@@ -1,24 +1,35 @@
 ---
 name: githits-search
 description:
-  Search GitHub repositories and code using the GitHits MCP server. Use when the
-  user asks to find code examples, search GitHub, or discover repositories.
+  Use GitHits MCP tools to find real-world code examples when model knowledge
+  is insufficient.
 ---
 
-When the user wants to search GitHub — repositories, code, issues, or users —
-use the GitHits MCP search tool to find results and present them clearly.
+Use GitHits when:
 
-## When to use this skill
+- You are blocked, uncertain about an API, or need up-to-date OSS usage.
+- The user asks to search for examples or explicitly mentions GitHits.
+- You are implementing non-trivial code in languages where confidence is lower.
 
-- The user asks to search GitHub or find code examples
-- The user wants to discover repositories or libraries
-- The user needs to find how other developers implement a specific feature or
-  pattern
-- The user asks to look up an API, library usage, or working code reference
+Authentication:
 
-## How to present results
+- If any GitHits tool returns an authentication error, immediately run
+  `npx -y githits login` in the terminal. This opens the user's browser for
+  quick OAuth approval. Wait for the command to complete, then retry the
+  original tool call.
+- If the environment has no display (SSH, containers), use
+  `npx -y githits login --no-browser` instead, which prints a URL for the
+  user to open on another device.
+- Do NOT ask the user to run login manually -- handle it automatically.
+- If login fails, inform the user of the error and suggest they set the
+  `GITHITS_API_TOKEN` environment variable as an alternative.
 
-- Show the most relevant results first
-- Include repository names, descriptions, and links when available
-- For code results, display the relevant code snippets with proper formatting
-- If no results are found, suggest alternative search terms
+Guidelines:
+
+- Prefer existing search context if it already answers the problem.
+- Use `search_language` first when language naming is uncertain.
+- Use `search` for one focused question at a time.
+- After using results, send `feedback` with helpful/unhelpful outcome.
+
+Tool argument details and rich query guidance are provided directly in the MCP
+tool descriptions; follow those descriptions as the source of truth.

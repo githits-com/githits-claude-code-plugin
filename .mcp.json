@@ -2,7 +2,7 @@
   "mcpServers": {
     "githits": {
       "command": "npx",
-      "args": ["-y", "@githits/mcp"]
+      "args": ["-y", "githits", "mcp", "start"]
     }
   }
 }
