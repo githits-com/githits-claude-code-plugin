@@ -36,13 +36,13 @@ environments (SSH, CI), use `--no-browser` to get a URL instead, or set the
 
 ## Commands
 
-| Command                   | Description                                  |
-| ------------------------- | -------------------------------------------- |
-| `/githits:search <query>` | Search for code examples from open source    |
-| `/githits:login`          | Authenticate with your GitHits account       |
-| `/githits:status`         | Show your current authentication status      |
-| `/githits:logout`         | Remove stored credentials                    |
-| `/githits:help`           | Show available commands and usage             |
+| Command                   | Description                               |
+| ------------------------- | ----------------------------------------- |
+| `/githits:search <query>` | Search for code examples from open source |
+| `/githits:login`          | Authenticate with your GitHits account    |
+| `/githits:status`         | Show your current authentication status   |
+| `/githits:logout`         | Remove stored credentials                 |
+| `/githits:help`           | Show available commands and usage         |
 
 > The plugin expects the `githits` CLI to be published on npm. Marketplace
 > installs should happen after the CLI package is live.
@@ -53,11 +53,11 @@ This plugin connects to the GitHits MCP server via the
 [`githits`](https://www.npmjs.com/package/githits) npm package, started with
 `npx -y githits mcp start` over stdio. Claude Code gets three tools:
 
-| Tool              | Purpose                                                   |
-| ----------------- | --------------------------------------------------------- |
-| `search`          | Find code examples by describing what you need            |
-| `search_language` | Look up supported programming language names              |
-| `feedback`        | Rate search results to improve future quality             |
+| Tool              | Purpose                                        |
+| ----------------- | ---------------------------------------------- |
+| `search`          | Find code examples by describing what you need |
+| `search_language` | Look up supported programming language names   |
+| `feedback`        | Rate search results to improve future quality  |
 
 Claude decides when to call these tools on its own — typically when it's stuck,
 needs a working example for an unfamiliar API, or encounters an error it can't
