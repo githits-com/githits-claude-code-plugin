@@ -100,6 +100,38 @@ For CI or headless environments, set an environment variable:
 export GITHITS_API_TOKEN=your-token-here
 ```
 
+## Local Development & Testing
+
+### Test the plugin locally
+
+Use the `--plugin-dir` flag to load the plugin without installing it from a
+marketplace:
+
+```
+claude --plugin-dir ./githits-claude-code-plugin
+```
+
+This starts Claude Code with the plugin loaded for that session. You can verify
+it loaded by running `/mcp`.
+
+### Test CLI changes locally with `npm link`
+
+To test unpublished `githits-cli` changes with the plugin, link your local build
+globally:
+
+```
+cd /path/to/githits-cli
+bun run build
+npm link
+githits --version    # verify the linked version
+```
+
+Then load the plugin as usual:
+
+```
+claude --plugin-dir ./githits-claude-code-plugin
+```
+
 ## License
 
 MIT
