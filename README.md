@@ -22,17 +22,16 @@ environments (SSH, CI), use `--no-browser` to get a URL instead, or set the
 
 ## Installation
 
-### From the Official Anthropic Plugin Directory
+### Quick Install (recommended)
 
-```
-/plugin install githits
-```
-
-### From GitHub
-
-```
-/plugin install github:GitHits-com/githits-claude-code-plugin
-```
+1. Add the GitHits marketplace:
+   ```
+   /plugin marketplace add GitHits-com/githits-claude-code-plugin
+   ```
+2. Install the plugin:
+   ```
+   /plugin install githits@githits-plugins
+   ```
 
 ## Commands
 
