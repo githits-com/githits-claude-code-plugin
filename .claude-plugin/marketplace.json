@@ -11,10 +11,7 @@
   "plugins": [
     {
       "name": "githits",
-      "source": {
-        "source": "github",
-        "repo": "GitHits-com/githits-claude-code-plugin"
-      },
+      "source": "https://github.com/GitHits-com/githits-claude-code-plugin.git",
       "description": "Code examples from global open source for developers and AI assistants",
       "author": {
         "name": "GitHits"
