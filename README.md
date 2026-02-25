@@ -16,6 +16,8 @@ working solution in seconds.
 
 ### Quick Install (recommended)
 
+Open Claude Code first (`claude`), then run these in the Claude input box:
+
 1. Add the GitHits marketplace:
    ```
    /plugin marketplace add GitHits-com/githits-claude-code-plugin
@@ -24,6 +26,13 @@ working solution in seconds.
    ```
    /plugin install githits@githits-plugins
    ```
+
+If you prefer terminal commands (outside a Claude session), use:
+
+```
+claude plugin marketplace add GitHits-com/githits-claude-code-plugin
+claude plugin install githits@githits-plugins
+```
 
 ## Commands
 
