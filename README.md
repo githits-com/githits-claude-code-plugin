@@ -20,7 +20,7 @@ Open Claude Code first (`claude`), then run these in the Claude input box:
 
 1. Add the GitHits marketplace:
    ```
-   /plugin marketplace add GitHits-com/githits-claude-code-plugin
+   /plugin marketplace add githits-com/githits-claude-code-plugin
    ```
 2. Install the plugin:
    ```
@@ -30,7 +30,7 @@ Open Claude Code first (`claude`), then run these in the Claude input box:
 If you prefer terminal commands (outside a Claude session), use:
 
 ```
-claude plugin marketplace add GitHits-com/githits-claude-code-plugin
+claude plugin marketplace add githits-com/githits-claude-code-plugin
 claude plugin install githits@githits-plugins
 ```
 
