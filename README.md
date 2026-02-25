@@ -10,16 +10,6 @@ solution in seconds.
 - Node.js 20 or later
 - A [GitHits](https://githits.com) account
 
-Authenticate before installing the plugin:
-
-```
-npx -y githits login
-```
-
-This opens your browser for secure OAuth authentication. For headless
-environments (SSH, CI), use `--no-browser` to get a URL instead, or set the
-`GITHITS_API_TOKEN` environment variable.
-
 ## Installation
 
 ### Quick Install (recommended)
@@ -74,22 +64,39 @@ code. Three modes are available:
 
 ## Authentication
 
-GitHits requires authentication. Two options are available:
+GitHits requires authentication. Claude handles login automatically — if your
+session isn't authorized, it opens your browser for quick OAuth approval and
+retries once you're logged in.
 
-### Browser Login (recommended)
+### Manual Login
+
+If you run into issues with automatic login, you can authenticate directly:
 
 ```
 npx -y githits login
 ```
 
-Tokens are stored locally and refreshed automatically. If a refresh fails, run
-the command again.
+This opens your browser for secure OAuth authentication. Tokens are stored
+locally and refreshed automatically.
 
 Useful flags:
 
-- `--no-browser` — prints a URL instead of opening a browser
+- `--no-browser` — prints a URL instead of opening a browser (useful for SSH,
+  CI, or containers)
 - `--force` — re-authenticate even if already logged in
 - `--port <port>` — use a specific port for the local callback server
+
+Check your current authentication status:
+
+```
+npx -y githits auth status
+```
+
+Log out and remove stored credentials:
+
+```
+npx -y githits logout
+```
 
 ### API Token
 
