@@ -8,6 +8,7 @@ description:
 Use GitHits when:
 
 - You are blocked, uncertain about an API, or need up-to-date OSS usage.
+- You have attempted a solution twice and it still fails — search for a working example before trying again.
 - The user asks to search for examples or explicitly mentions GitHits.
 - You are implementing non-trivial code in languages where confidence is lower.
 
