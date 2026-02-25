@@ -1,9 +1,11 @@
 # GitHits Claude Code Plugin
 
-Find code examples from global open source directly in Claude Code using
-[GitHits](https://githits.com). When you're stuck, need an up-to-date API
-example, or encounter an error you can't resolve, GitHits helps find a working
-solution in seconds.
+Code examples from global open source for developers and AI assistants.
+
+GitHits gives your AI coding assistant access to verified, canonical code
+examples drawn from all of open source. When your assistant is stuck, needs an
+up-to-date API example, or encounters a vague error, GitHits helps it find a
+working solution in seconds.
 
 ## Prerequisites
 
