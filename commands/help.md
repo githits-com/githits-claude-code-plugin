@@ -5,6 +5,15 @@ disable-model-invocation: true
 
 # GitHits Help
 
+Run the GitHits CLI help command in the terminal:
+
+```
+npx -y githits help
+```
+
+Then display the command output clearly to the user, followed by this plugin
+context summary:
+
 ## Slash Commands
 
 - `/githits:search <query>` — Search for code examples from open source.
@@ -28,4 +37,10 @@ This plugin connects to the GitHits MCP server and exposes three tools:
 Run `npx -y githits login` to authenticate via browser, or set the
 `GITHITS_API_TOKEN` environment variable for headless environments.
 
-Display this information to the user in a clear, formatted list.
+If users want to verify MCP tools loaded, suggest `/mcp`.
+
+If the command fails, report the error and suggest running:
+
+```
+npx -y githits login
+```
